@@ -1,10 +1,7 @@
-
-
 const key = document.querySelectorAll(".key");
 const mysteryLetters = document.querySelectorAll(".letter");
 const mysteryWord = "SABOTEUR";
 const messageEl = document.querySelector(".message");
-
 
 let correctLetters = 0;
 let badAttempts = 0;
@@ -29,7 +26,7 @@ function checkForWin() {
 key.forEach((key) => {
   key.addEventListener("click", (event) => {
     const clickedKey = event.target.innerText;
-    const successful = 1;
+    let successful = false;
 
     for (let i = 0; i < mysteryWord.length; i++) {
       if (
@@ -39,18 +36,14 @@ key.forEach((key) => {
         mysteryLetters[i].innerText = clickedKey;
         mysteryLetters[i].classList.add("guess");
         correctLetters++;
+        successful = true;
         console.log("correct attempts:", correctLetters);
-        checkForWin();
-        successful = 1;
-        return;
       }
     }
-    if (mysteryWord[i] != clickedKey) {
+
+    if (!successful) {
       badAttempts++;
       console.log("bad attempts:", badAttempts);
-      checkForWin();
-      return;
     }
   });
 });
-
