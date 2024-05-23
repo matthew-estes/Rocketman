@@ -11,18 +11,22 @@ h1 {
   color: white;
   text-align: center;
   font-family: "Orbitron", sans-serif;
-
 }
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
 button {
   font-size: 50px;
-  text-align: center;
-  margin: auto;
-  display: flex;
   height: auto;
   width: auto;
   background-color: aqua;
   
 }
+
 /* .catagories {
     height: 60px;
     font-size: 40px;
@@ -35,7 +39,6 @@ button {
   margin-top: 400px;
   display: flex;
   justify-content: center;
-
 }
 
 .letter {

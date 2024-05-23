@@ -1,6 +1,9 @@
 const key = document.querySelectorAll(".key");
 const mysteryLetters = document.querySelectorAll(".letter");
-const mysteryWord = "SABOTEUR";
+const mysteryWordArray = ["SWEATER", "HEADSET", "TOOLBOX", "LUGGAGE", "JOURNAL", "CABINET", "CURTAIN", "PERFUME", "MATTRESS", "UMBRELLA", "JOURNAL",
+"PRINTER", "SAILING", "CYCLING", "CRICKET", "FOOTBALL", "FISHING", "LASAGNA", "MUSTARD", "BURRITO", "BROWNIE", "PICKLES", "JUKEBOX", "SQUEEZE", "JACKPOT", "JEWELRY", "CUPCAKE"]
+
+const mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryLetters.length)]  //thank you MDN!//
 const messageEl = document.querySelector(".message");
 
 let correctLetters = 0;
@@ -17,7 +20,7 @@ function checkForWin() {
   if (correctLetters == mysteryWord.length) {
     messageEl.innerText = "Congrats, you won!";
   } else if (badAttempts == 3) {
-    messageEl.innerText = "Sorry, you lost! The word was" + mysteryWord;
+    messageEl.innerText = "Sorry, you lost! The word was " + mysteryWord;
   }
 }
 
@@ -37,12 +40,14 @@ key.forEach((key) => {
         mysteryLetters[i].classList.add("guess");
         correctLetters++;
         successful = true;
+        checkForWin();
         console.log("correct attempts:", correctLetters);
+        return;
       }
     }
-
     if (!successful) {
       badAttempts++;
+      checkForWin();
       console.log("bad attempts:", badAttempts);
     }
   });
