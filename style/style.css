@@ -1,32 +1,42 @@
 body {
   background-color: black;
 }
+
+
 .message {
-  font-size: 100px;
+  font-size: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: white;
 }
 
 
 h1 {
-  font-size: 100px;
+  font-size: 50px;
   color: white;
   text-align: center;
   font-family: "Orbitron", sans-serif;
-}
+/* }
 .container {
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 10px;
+  gap: 10px; */
 }
 
 button {
-  font-size: 50px;
+  margin-top: 25px;
+  font-size: 30px;
+  font-family: "Orbitron", sans-serif;
   height: auto;
-  width: auto;
+  width: 125px;
   background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;  
   
 }
 
@@ -59,7 +69,7 @@ button {
 }
 
 .keyboard {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .row {
@@ -69,11 +79,12 @@ button {
 }
 
 .key {
-  padding: 30px;
+  padding: 10px;
   margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 80px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  font-family: "Orbitron", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,8 +97,8 @@ button {
 
 .correct {
   color: black;
-  background-color: green;
-  border: 2px solid green;
+  /* background-color: green;
+  border: 2px solid green; */
 }
 
 
