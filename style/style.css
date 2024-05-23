@@ -1,0 +1,78 @@
+body {
+  background-color: black;
+}
+.message {
+color: white;
+}
+
+
+h1 {
+  font-size: 100px;
+  color: white;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+
+}
+button {
+  font-size: 50px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  height: auto;
+  width: auto;
+  background-color: aqua;
+  
+}
+/* .catagories {
+    height: 60px;
+    font-size: 40px;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+.mysteryWord {
+  margin-top: 400px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.letter {
+  padding: 30px;
+  margin: 10px;
+  width: 50px;
+  height: 75px;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #000000;
+  border-bottom: yellow 5px solid;
+}
+
+.keyboard {
+  margin-top: 60px;
+}
+
+.row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center
+}
+
+.key {
+  padding: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#ffffff;
+  background-color: #000000;
+  border-radius: 4px;
+  border: 2px solid rgb(160, 191, 215);
+  cursor: grab;
+}
