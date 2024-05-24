@@ -1,5 +1,5 @@
 const key = document.querySelectorAll('.key');
-const playBtn = document.getElementById('play')
+const playBtn = document.querySelector('#play')
 const resetBtn = document.querySelector('#reset')
 const mysteryLetters = document.querySelectorAll(".letter");
 const messageEl = document.querySelector(".message");
@@ -83,7 +83,10 @@ key.forEach((key) => {
   });
 });
 
+resetBtn.addEventListener("click", (event) => {
+  console.log("clicked!");
+})
 
-resetBtn.addEventListener('click', (event) => {
-  init ();
+playBtn.addEventListener("click", (event) => {
+  console.log("clicked!");
 })
