@@ -40,8 +40,12 @@ let badAttempts = 0;
 function init() {
   correctLetters = 0;
   badAttempts = 0;
+  messageEl.innerText = "";
+
   mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
   console.log(mysteryWord);
+
+
 }
 
 function checkForWin() {
