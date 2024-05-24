@@ -44,7 +44,11 @@ function init() {
 
   mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
   console.log(mysteryWord);
-
+  
+  mysteryLetters.forEach((letter, idx) => {
+    letter.innerText = "_"
+    letter.classList.remove("guess");
+    });
 
 }
 
