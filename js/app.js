@@ -1,6 +1,6 @@
 const key = document.querySelectorAll('.key');
 const playBtn = document.querySelector('.play')
-const resetBtn = document.querySelector('.reset')
+
 const mysteryLetters = document.querySelectorAll(".letter");
 const messageEl = document.querySelector(".message");
 
@@ -44,6 +44,11 @@ function init() {
 
   mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
   console.log(mysteryWord);
+
+  key.forEach((key) => {
+    key.classList.remove("wrong");
+    key.classList.remove("correct");
+  })
   
   mysteryLetters.forEach((letter, idx) => {
     letter.innerText = "_"
@@ -97,7 +102,3 @@ playBtn.addEventListener("click", (event) => {
   console.log("clicked!");
 })
 
-resetBtn.addEventListener("click", (event) => {
-  init();
-  console.log("clicked!");
-})
