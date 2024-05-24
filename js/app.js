@@ -70,13 +70,13 @@ key.forEach((key) => {
         mysteryLetters[i].classList.add("guess");
         correctLetters++;
         successful = true;
-        event.target.classList.add("correct");  //https://css-tricks.com/working-with-attributes-on-dom-elements //
+        event.target.classList.add("correct");  
         console.log("correct attempts:", correctLetters);
       }
     }
     if (!successful) {
       badAttempts++;
-      event.target.classList.add("wrong");  //https://css-tricks.com/working-with-attributes-on-dom-elements //
+      event.target.classList.add("wrong"); 
       console.log("bad attempts:", badAttempts);
     }
     checkForWin();
