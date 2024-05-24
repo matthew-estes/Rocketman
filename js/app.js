@@ -2,7 +2,8 @@ const key = document.querySelectorAll(".key");
 const playBtn = document.querySelector(".play");
 const mysteryWordReveal = document.querySelector(".mysteryWordReveal");
 const mysteryLetters = document.querySelectorAll(".letter");
-const messageEl = document.querySelector(".message");
+const winMessageEl = document.querySelector(".message1");
+const loseMessageEl = document.querySelector(".message2");
 const instructions = document.querySelector(".instructions");
 
 const mysteryWordArray = [
@@ -25,10 +26,12 @@ let badAttempts = 0;
 /*----------------------------- Functions -----------------------------*/
 
 function init() {
-  instructions.innerHTML = "";
   correctLetters = 0;
   badAttempts = 0;
-  messageEl.innerText = "";
+  winMessageEl.innerText = "";
+  loseMessageEl.innerText = "";
+  instructions.innerHTML = "";
+
   key.forEach((key) => {
     key.classList.remove("wrong");
     key.classList.remove("correct");
@@ -36,9 +39,9 @@ function init() {
 
   mysteryWordReveal.innerHTML = "";
 
-  mysteryWord =
-    mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
+  mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
   console.log(mysteryWord);
+
   for (let i = 0; i < mysteryWord.length; i++) {
     const hiddenDiv = document.createElement("div");
     hiddenDiv.classList.add("letter");
@@ -49,20 +52,15 @@ function init() {
 
 function checkForWin() {
   if (correctLetters == mysteryWord.length) {
-    messageEl.innerText = "Congrats, you won!";
+    winMessageEl.innerText = "Congratulations, you won! May you live long and prosper!";
   } else if (badAttempts == 4) {
-    messageEl.innerText =
-      "Houston, we have a problem! The word was " + mysteryWord;
+    loseMessageEl.innerText =
+    `Houston, we have a problem! 
+    The mystery word was: ${mysteryWord}.`;
   }
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
-playBtn.addEventListener("click", () => {
-  init();
-  console.log("clicked!");
-});
-
-function newFunction() {
   key.forEach((key) => {
     key.addEventListener("click", (event) => {
       const clickedKey = event.target.innerText;
@@ -89,4 +87,9 @@ function newFunction() {
       checkForWin();
     });
   });
-}
+
+
+playBtn.addEventListener("click", () => {
+  init();
+  console.log("clicked!");
+});

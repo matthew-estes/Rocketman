@@ -2,12 +2,22 @@ body {
   background-color: black;
 }
 
-.message {
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+.message1 {
+  font-size: 60px;  
+  color: #ffffff;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Futura", sans-serif;
+  margin: auto 200px
+}
+
+.message2 {
+  font-size: 60px;  
+  color: red;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Futura", sans-serif;
+  margin: auto 200px
 }
 
 h1 {
@@ -15,8 +25,6 @@ h1 {
   color: white;
   text-align: center;
   font-family: "Orbitron", sans-serif;
-
-  
 }
 
 .instructions {
@@ -25,18 +33,15 @@ h1 {
   flex-direction: row;
   text-align: center;
   font-family: "Futura", sans-serif;
-  margin: auto 50px auto 50px;
+  margin: auto 200px auto 200px;
 }
+
 span {
   color: red;
 }
 
-span2 {
-  font-size: 40px;
-}
 
-/* 
-.container {
+/* .container {
   margin-top: 50px;
   display: flex;
   flex-direction: row;
@@ -58,18 +63,20 @@ button {
 
 .mysteryWordReveal {
   margin-top: 400px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* 
+.mysteryWord {
+  margin-top: 400px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-  
-.mysteryWord {
-  margin-top: 400px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+} */
+
 
 .letter {
   padding: 30px;
@@ -79,7 +86,7 @@ button {
   font-size: 100px;
   display: flex;
   flex-direction: row;
-  align-items: ;
+  align-items: center;
   color: gold;
   background-color: #000000;
  
