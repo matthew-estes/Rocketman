@@ -10,13 +10,31 @@ body {
   color: white;
 }
 
-
 h1 {
-  font-size: 50px;
+  font-size: 75px;
   color: white;
   text-align: center;
   font-family: "Orbitron", sans-serif;
+
+  
 }
+
+.instructions {
+  font-size: 30px;  
+  color: #ffffff;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Futura", sans-serif;
+  margin: auto 50px auto 50px;
+}
+span {
+  color: red;
+}
+
+span2 {
+  font-size: 40px;
+}
+
 /* 
 .container {
   margin-top: 50px;
@@ -33,6 +51,7 @@ button {
   font-family: "Orbitron", sans-serif;
   height: auto;
   width: auto;
+  padding: 10px;
   background-color: aqua;
  
 }
@@ -61,7 +80,6 @@ button {
   display: flex;
   flex-direction: row;
   align-items: ;
- 
   color: gold;
   background-color: #000000;
  
@@ -73,7 +91,7 @@ button {
 
 .row {
   display: flex;
-  align-items: flex-end;
+  flex-direction: row;
   justify-content: center
 }
 
