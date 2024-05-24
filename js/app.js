@@ -1,37 +1,26 @@
-const key = document.querySelectorAll('.key');
-const playBtn = document.querySelector('.play')
-
+const key = document.querySelectorAll(".key");
+const playBtn = document.querySelector(".play")
+const mysteryWordReveal = document.querySelector(".mysteryWordReveal");
 const mysteryLetters = document.querySelectorAll(".letter");
 const messageEl = document.querySelector(".message");
 
 const mysteryWordArray = [
-  "SWEATER",
-  "HEADSET",
-  "TOOLBOX",
-  "LUGGAGE",
-  "JOURNAL",
-  "CABINET",
-  "CURTAIN",
-  "PERFUME",
-  "JOURNAL",
-  "PRINTER",
-  "SAILING",
-  "CYCLING",
-  "CRICKET",
-  "FISHING",
-  "LASAGNA",
-  "MUSTARD",
-  "BURRITO",
-  "BROWNIE",
-  "PICKLES",
-  "JUKEBOX",
-  "SQUEEZE",
-  "JACKPOT",
-  "JEWELRY",
-  "CUPCAKE",
+  "GALAXY",
+  "PLANET",
+  "SATELLITE",
+  "COSMOS",
+  "ASTRONAUT",
+  "TELESCOPE",
+  "ROCKET",
+  "INTERSTELLAR",
+  "CONSTELLATION",
+  "EXTRATERRESTRIAL",
+  "JUPITER",
+  "SUPERNOVA",
+  "METEORITE",
 ];
 
-let mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
+let mysteryWord;
 let correctLetters = 0;
 let badAttempts = 0;
 
@@ -42,19 +31,23 @@ function init() {
   badAttempts = 0;
   messageEl.innerText = "";
 
-  mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
-  console.log(mysteryWord);
-
   key.forEach((key) => {
     key.classList.remove("wrong");
     key.classList.remove("correct");
   })
   
-  mysteryLetters.forEach((letter, idx) => {
-    letter.innerText = "_"
-    letter.classList.remove("guess");
-    });
+  mysteryWordReveal.innerHTML = "";
 
+  mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
+  console.log(mysteryWord);
+
+  for (let i = 0; i < mysteryWord.length; i++){
+    const hiddenDiv = document.createElement('div');
+    hiddenDiv.classList.add('letter');
+    hiddenDiv.innerText = "★";
+    mysteryWordReveal.appendChild(hiddenDiv);
+  }
+   
 }
 
 function checkForWin() {
@@ -74,12 +67,8 @@ key.forEach((key) => {
     let successful = false;
 
     for (let i = 0; i < mysteryWord.length; i++) {
-      if (
-        mysteryWord[i] === clickedKey &&
-        !mysteryLetters[i].classList.contains("guess")
-      ) {
-        mysteryLetters[i].innerText = clickedKey;
-        mysteryLetters[i].classList.add("guess");
+      if (mysteryWord[i] === clickedKey && mysteryWordReveal.children[i].innerText === "★") {
+        mysteryWordReveal.children[i].innerText = clickedKey;
         correctLetters++;
         successful = true;
         event.target.classList.add("correct");  
