@@ -2,7 +2,6 @@ body {
   background-color: black;
 }
 
-
 .message {
   font-size: 50px;
   display: flex;
@@ -17,40 +16,39 @@ h1 {
   color: white;
   text-align: center;
   font-family: "Orbitron", sans-serif;
-/* }
+}
+/* 
 .container {
   margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 10px; */
-}
+  gap: 10px;
+} */
 
 button {
-  margin-top: 25px;
-  font-size: 30px;
+  margin: 40px auto; 
+  display: flex;
+  font-size: 50px;
   font-family: "Orbitron", sans-serif;
   height: auto;
-  width: 125px;
+  width: auto;
   background-color: aqua;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: 10px;  
-  
+ 
 }
 
-/* .catagories {
-    height: 60px;
-    font-size: 40px;
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-  } */
+.mysteryWordReveal {
+  margin-top: 400px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
   
 .mysteryWord {
   margin-top: 400px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -61,8 +59,9 @@ button {
   height: 75px;
   font-size: 100px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  align-items: ;
+ 
   color: gold;
   background-color: #000000;
  
