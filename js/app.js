@@ -1,6 +1,6 @@
 const key = document.querySelectorAll('.key');
-const playBtn = document.querySelector('#play')
-const resetBtn = document.querySelector('#reset')
+const playBtn = document.querySelector('.play')
+const resetBtn = document.querySelector('.reset')
 const mysteryLetters = document.querySelectorAll(".letter");
 const messageEl = document.querySelector(".message");
 
@@ -13,14 +13,11 @@ const mysteryWordArray = [
   "CABINET",
   "CURTAIN",
   "PERFUME",
-  "MATTRESS",
-  "UMBRELLA",
   "JOURNAL",
   "PRINTER",
   "SAILING",
   "CYCLING",
   "CRICKET",
-  "FOOTBALL",
   "FISHING",
   "LASAGNA",
   "MUSTARD",
@@ -34,7 +31,7 @@ const mysteryWordArray = [
   "CUPCAKE",
 ];
 
-const mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
+let mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
 let correctLetters = 0;
 let badAttempts = 0;
 
@@ -43,6 +40,8 @@ let badAttempts = 0;
 function init() {
   correctLetters = 0;
   badAttempts = 0;
+  mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
+  console.log(mysteryWord);
 }
 
 function checkForWin() {
@@ -83,10 +82,14 @@ key.forEach((key) => {
   });
 });
 
-resetBtn.addEventListener("click", (event) => {
+
+
+playBtn.addEventListener("click", (event) => {
+  init();
   console.log("clicked!");
 })
 
-playBtn.addEventListener("click", (event) => {
+resetBtn.addEventListener("click", (event) => {
+  init();
   console.log("clicked!");
 })
