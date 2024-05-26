@@ -1,13 +1,29 @@
 body {
   background-color: black;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   font-size: 75px;
-  color: white;
+  color: gold;
   text-align: center;
   font-family: "Orbitron", sans-serif;
 }
+
+.instructions {
+  font-size: 60px;
+  color: #ffffff;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Futura", sans-serif;
+  margin: auto 200px auto 200px;
+}
+
+.instructions span {
+  color: red;
+}
+
 
 .message1 {
   font-size: 60px;
@@ -25,29 +41,6 @@ h1 {
   text-align: center;
   font-family: "Futura", sans-serif;
   margin: auto 200px;
-}
-
-.instructions {
-  font-size: 30px;
-  color: #ffffff;
-  flex-direction: row;
-  text-align: center;
-  font-family: "Futura", sans-serif;
-  margin: auto 200px auto 200px;
-}
-
-.instructions span {
-  color: red;
-}
-
-
-button {
-  margin: 40px auto;
-  display: flex;
-  font-size: 50px;
-  font-family: "Orbitron", sans-serif;
-  padding: 10px;
-  background-color: aqua;
 }
 
 .mysteryWordReveal {
@@ -106,4 +99,13 @@ button {
   color: black;
   background-color: red;
   border: 2px solid red;
+}
+
+button {
+  margin: 40px auto;
+  display: flex;
+  font-size: 50px;
+  font-family: "Orbitron", sans-serif;
+  padding: 10px;
+  background-color: gold;
 }
