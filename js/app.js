@@ -5,7 +5,6 @@ const mysteryLetters = document.querySelectorAll(".letter");
 const winMessageEl = document.querySelector(".message1");
 const loseMessageEl = document.querySelector(".message2");
 const instructions = document.querySelector(".instructions");
-
 const mysteryWordArray = [
   "GALAXY",
   "PLANET",
@@ -23,8 +22,6 @@ let mysteryWord;
 let correctLetters = 0;
 let badAttempts = 0;
 
-/*----------------------------- Functions -----------------------------*/
-
 function init() {
   correctLetters = 0;
   badAttempts = 0;
@@ -39,7 +36,8 @@ function init() {
 
   mysteryWordReveal.innerHTML = "";
 
-  mysteryWord = mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
+  mysteryWord =
+    mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
   console.log(mysteryWord);
 
   for (let i = 0; i < mysteryWord.length; i++) {
@@ -52,42 +50,40 @@ function init() {
 
 function checkForWin() {
   if (correctLetters == mysteryWord.length) {
-    winMessageEl.innerText = "Congratulations, you won! May you live long and prosper!";
+    winMessageEl.innerText =
+      "Congratulations, you won! May you live long and prosper!";
   } else if (badAttempts == 4) {
-    loseMessageEl.innerText =
-    `Houston, we have a problem! 
+    loseMessageEl.innerText = `Houston, we have a problem! 
     The mystery word was: ${mysteryWord}.`;
   }
 }
 
-/*----------------------------- Event Listeners -----------------------------*/
-  key.forEach((key) => {
-    key.addEventListener("click", (event) => {
-      const clickedKey = event.target.innerText;
+key.forEach((key) => {
+  key.addEventListener("click", (event) => {
+    const clickedKey = event.target.innerText;
 
-      let successful = false;
+    let successful = false;
 
-      for (let i = 0; i < mysteryWord.length; i++) {
-        if (
-          mysteryWord[i] === clickedKey &&
-          mysteryWordReveal.children[i].innerText === "★"
-        ) {
-          mysteryWordReveal.children[i].innerText = clickedKey;
-          correctLetters++;
-          successful = true;
-          event.target.classList.add("correct");
-          console.log("correct attempts:", correctLetters);
-        }
+    for (let i = 0; i < mysteryWord.length; i++) {
+      if (
+        mysteryWord[i] === clickedKey &&
+        mysteryWordReveal.children[i].innerText === "★"
+      ) {
+        mysteryWordReveal.children[i].innerText = clickedKey;
+        correctLetters++;
+        successful = true;
+        event.target.classList.add("correct");
+        console.log("correct attempts:", correctLetters);
       }
-      if (!successful) {
-        badAttempts++;
-        event.target.classList.add("wrong");
-        console.log("bad attempts:", badAttempts);
-      }
-      checkForWin();
-    });
+    }
+    if (!successful) {
+      badAttempts++;
+      event.target.classList.add("wrong");
+      console.log("bad attempts:", badAttempts);
+    }
+    checkForWin();
   });
-
+});
 
 playBtn.addEventListener("click", () => {
   init();
