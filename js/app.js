@@ -15,7 +15,7 @@ const mysteryWordArray = [
   "ROCKET",
   "JUPITER",
   "SUPERNOVA",
-  "METEORITE",
+  "METEORITE"
 ];
 
 let mysteryWord;

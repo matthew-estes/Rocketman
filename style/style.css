@@ -40,13 +40,6 @@ span {
   color: red;
 }
 
-/* .container {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-} */
 
 button {
   margin: 40px auto;
@@ -61,19 +54,10 @@ button {
 
 .mysteryWordReveal {
   margin-top: 400px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-/* 
-.mysteryWord {
-  margin-top: 400px;
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
 
 .letter {
   padding: 30px;
@@ -82,7 +66,6 @@ button {
   height: 75px;
   font-size: 100px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   color: gold;
   background-color: #000000;
@@ -117,8 +100,7 @@ button {
 
 .correct {
   color: black;
-  /* background-color: green;
-  border: 2px solid green; */
+  border: 2px solid black;
 }
 
 .wrong {
