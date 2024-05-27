@@ -12,7 +12,7 @@ h1 {
 }
 
 .instructions {
-  font-size: 20px;
+  font-size: 40px;
   color: #ffffff;
   flex-direction: row;
   text-align: center;
@@ -40,6 +40,22 @@ h1 {
   text-align: center;
   font-family: "Futura", sans-serif;
   margin: auto 200px;
+}
+
+
+.imageLayers {
+  transform: scale(0.6);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 50px auto;
+  width: 100%;
+  padding-bottom: ;
+}
+
+
+.layers {
+  position: absolute;
 }
 
 .mysteryWordReveal {
