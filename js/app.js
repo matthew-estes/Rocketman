@@ -90,7 +90,7 @@ key.forEach((key) => {
       badAttempts++;
       event.target.classList.add("wrong");
       console.log("bad attempts:", badAttempts);
-      if (badAttempts < 4) {
+      if (badAttempts <= 4) {
         imageLayers[badAttempts - 1].style.display = 'none';
         imageLayers[badAttempts].style.display = 'block';
       }
