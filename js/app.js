@@ -5,7 +5,7 @@ const mysteryLetters = document.querySelectorAll(".letter");
 const winMessageEl = document.querySelector(".message1");
 const loseMessageEl = document.querySelector(".message2");
 const instructions = document.querySelector(".instructions");
-const imageLayers = document.querySelectorAll(".layers")
+const imageLayers = document.querySelectorAll(".layers");
 
 const mysteryWordArray = [
   "GALAXY",
@@ -33,9 +33,9 @@ function init() {
 
   imageLayers.forEach((layer, index) => {
     if (index === 0) {
-      layer.style.display = 'block';
+      layer.style.display = "block";
     } else {
-      layer.style.display = 'none';
+      layer.style.display = "none";
     }
   });
 
@@ -48,7 +48,6 @@ function init() {
 
   mysteryWord =
     mysteryWordArray[Math.floor(Math.random() * mysteryWordArray.length)];
-  console.log(mysteryWord);
 
   for (let i = 0; i < mysteryWord.length; i++) {
     const hiddenDiv = document.createElement("div");
@@ -83,16 +82,15 @@ key.forEach((key) => {
         correctLetters++;
         successful = true;
         event.target.classList.add("correct");
-        console.log("correct attempts:", correctLetters);
       }
     }
     if (!successful) {
       badAttempts++;
       event.target.classList.add("wrong");
-      console.log("bad attempts:", badAttempts);
+
       if (badAttempts <= 4) {
-        imageLayers[badAttempts - 1].style.display = 'none';
-        imageLayers[badAttempts].style.display = 'block';
+        imageLayers[badAttempts - 1].style.display = "none";
+        imageLayers[badAttempts].style.display = "block";
       }
     }
     checkForWin();
@@ -101,5 +99,4 @@ key.forEach((key) => {
 
 playBtn.addEventListener("click", () => {
   init();
-  console.log("clicked!");
 });
