@@ -5,6 +5,8 @@ const mysteryLetters = document.querySelectorAll(".letter");
 const winMessageEl = document.querySelector(".message1");
 const loseMessageEl = document.querySelector(".message2");
 const instructions = document.querySelector(".instructions");
+const imageLayers = document.querySelectorAll(".layers")
+
 const mysteryWordArray = [
   "GALAXY",
   "PLANET",
@@ -28,6 +30,14 @@ function init() {
   winMessageEl.innerText = "";
   loseMessageEl.innerText = "";
   instructions.innerHTML = "";
+
+  imageLayers.forEach((layer, index) => {
+    if (index === 0) {
+      layer.style.display = 'block';
+    } else {
+      layer.style.display = 'none';
+    }
+  });
 
   key.forEach((key) => {
     key.classList.remove("wrong");
@@ -80,6 +90,10 @@ key.forEach((key) => {
       badAttempts++;
       event.target.classList.add("wrong");
       console.log("bad attempts:", badAttempts);
+      if (badAttempts < 4) {
+        imageLayers[badAttempts - 1].style.display = 'none';
+        imageLayers[badAttempts].style.display = 'block';
+      }
     }
     checkForWin();
   });
