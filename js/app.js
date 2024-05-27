@@ -61,7 +61,7 @@ function init() {
 function checkForWin() {
   if (correctLetters == mysteryWord.length) {
     winMessageEl.innerText =
-      "Congratulations, you won! May you live long and prosper!";
+      "Thank you and congratulations! May you live long and prosper!";
   } else if (badAttempts == 4) {
     loseMessageEl.innerText = `Houston, we have a problem! 
     The mystery word was: ${mysteryWord}.`;
