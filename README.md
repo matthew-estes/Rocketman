@@ -2,11 +2,11 @@
 
 ![Screenshot of the starting page with instructions, rocketship, and keyboard displayed](https://github.com/matthew-estes/Rocketman/blob/main/screenshots/screenshot1.png)
 
-![Screenshot of the rocketship taking damage due to an incorrect guess](/assets/screenshots/screenshot2.png)
+![Screenshot of the rocketship taking damage due to an incorrect guess](https://github.com/matthew-estes/Rocketman/blob/main/screenshots/screenshot2.png)
 
-![Screenshot of a won game which has a congratulatory message](/assets/screenshots/screenshot3.png)
+![Screenshot of a won game which has a congratulatory message](https://github.com/matthew-estes/Rocketman/blob/main/screenshots/screenshot3.png)
 
-![Screenshot of a lost game, which has an message informing the user they lost with an image of an explosion in place of the rocketship](/assets/screenshots/screenshot4.png)
+![Screenshot of a lost game, which has an message informing the user they lost with an image of an explosion in place of the rocketship](https://github.com/matthew-estes/Rocketman/blob/main/screenshots/screenshot4.png)
 
 
 
