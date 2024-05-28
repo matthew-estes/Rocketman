@@ -1,12 +1,12 @@
 # Rocketman
 
-![Screenshot of the starting page with instructions, rocketship, and keyboard displayed](/assets/screenshots/Game Start Screenshot.png)
+![Screenshot of the starting page with instructions, rocketship, and keyboard displayed](/assets/screenshots/screenshot1.png)
 
-![Screenshot of the rocketship taking damage due to an incorrect guess](/assets/screenshots/Incorrect%20Guess%20Screenshot.png)
+![Screenshot of the rocketship taking damage due to an incorrect guess](/assets/screenshots/screenshot2.png)
 
-![Screenshot of a won game which has a congratulatory message](/assets/screenshots/Win%20Screenshot.png)
+![Screenshot of a won game which has a congratulatory message](/assets/screenshots/screenshot3.png)
 
-![Screenshot of a lost game, which has an message informing the user they lost with an image of an explosion in place of the rocketship](/assets/screenshots/Lose%20Screenshot.png)
+![Screenshot of a lost game, which has an message informing the user they lost with an image of an explosion in place of the rocketship](/assets/screenshots/screenshot4.png)
 
 
 
