@@ -1,6 +1,6 @@
 # Rocketman
 
-![Screenshot of the starting page with instructions, rocketship, and keyboard displayed](/assets/screenshots/screenshot1.png)
+![Screenshot of the starting page with instructions, rocketship, and keyboard displayed](assets/screenshots/screenshot1.png)
 
 ![Screenshot of the rocketship taking damage due to an incorrect guess](/assets/screenshots/screenshot2.png)
 
