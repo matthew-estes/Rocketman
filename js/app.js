@@ -63,7 +63,7 @@ function checkForWin() {
       "Thank you and congratulations! May you live long and prosper!";
   } else if (badAttempts == 4) {
     loseMessageEl.innerText = `Houston, we have a problem! 
-    The mystery word was: ${mysteryWord}.`;
+    The mystery word was ${mysteryWord}.`;
   }
 }
 
