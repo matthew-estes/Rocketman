@@ -1,6 +1,6 @@
 # Rocketman
 
-![Screenshot of the starting page with instructions, rocketship, and keyboard displayed](/assets/screenshots/Game%20Start%20Screenshot.png)
+![Screenshot of the starting page with instructions, rocketship, and keyboard displayed](/assets/screenshots/Game Start Screenshot.png)
 
 ![Screenshot of the rocketship taking damage due to an incorrect guess](/assets/screenshots/Incorrect%20Guess%20Screenshot.png)
 
@@ -25,7 +25,7 @@
 Utilized previous labs and the internet (MDN, Stack Overflow, and ChatGPT) for guidance. Kristina VanBergen-DeSilva was also a tremendous help as well!
 
 ##  Technologies Used:
-- HTMl
+- HTML
 - CSS
 - JavaScript
 
